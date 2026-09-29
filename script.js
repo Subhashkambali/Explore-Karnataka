@@ -1,0 +1,744 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: "Montserrat", sans-serif;
+color: #222;
+background: #ffffff;
+overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+font-family: "Playfair Display", serif;
+}
+
+img {
+width: 100%;
+display: block;
+}
+
+a {
+text-decoration: none;
+}
+
+/* NAVBAR */
+
+.navbar {
+padding: 18px 0;
+background: transparent;
+transition: 0.4s ease;
+}
+
+.navbar.scrolled {
+background: rgba(10, 25, 20, 0.96);
+padding: 12px 0;
+box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+font-size: 1.45rem;
+font-weight: 800;
+color: white !important;
+}
+
+.navbar-brand i {
+margin-right: 8px;
+}
+
+.nav-link {
+color: white !important;
+font-size: 0.85rem;
+font-weight: 600;
+margin-left: 15px;
+position: relative;
+}
+
+.nav-link::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 0;
+height: 2px;
+background: #f5c542;
+transition: 0.3s;
+}
+
+.nav-link:hover::after {
+width: 100%;
+}
+
+/* HERO */
+
+.hero-section {
+min-height: 100vh;
+background-image: url("https://images.unsplash.com/photo-1600100397608-f010e2f8e7d8?auto=format&fit=crop&w=2000&q=85");
+background-size: cover;
+background-position: center;
+position: relative;
+display: flex;
+align-items: center;
+color: white;
+}
+
+.hero-overlay {
+position: absolute;
+inset: 0;
+background: linear-gradient(
+90deg,
+rgba(0, 0, 0, 0.75),
+rgba(0, 0, 0, 0.3),
+rgba(0, 0, 0, 0.15)
+);
+}
+
+.hero-content {
+position: relative;
+z-index: 2;
+}
+
+.hero-small {
+font-size: 1rem;
+letter-spacing: 5px;
+font-weight: 600;
+color: #f5c542;
+margin-bottom: 15px;
+}
+
+.hero-content h1 {
+font-size: clamp(4rem, 9vw, 8rem);
+line-height: 0.9;
+font-weight: 800;
+margin-bottom: 30px;
+}
+
+.hero-content h1 span {
+color: #f5c542;
+}
+
+.hero-description {
+max-width: 600px;
+font-size: 1.1rem;
+line-height: 1.8;
+margin-bottom: 35px;
+}
+
+.hero-btn {
+display: inline-flex;
+align-items: center;
+gap: 12px;
+background: #f5c542;
+color: #111;
+padding: 15px 30px;
+border-radius: 50px;
+font-weight: 700;
+transition: 0.3s;
+}
+
+.hero-btn:hover {
+transform: translateY(-4px);
+background: white;
+color: #111;
+}
+
+.scroll-down {
+position: absolute;
+bottom: 30px;
+left: 50%;
+transform: translateX(-50%);
+font-size: 1.8rem;
+animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+0%,
+100% {
+transform: translate(-50%, 0);
+}
+
+```
+50% {
+    transform: translate(-50%, 10px);
+}
+```
+
+}
+
+/* GENERAL SECTIONS */
+
+.section-padding {
+padding: 100px 0;
+}
+
+.section-heading {
+margin-bottom: 60px;
+}
+
+.section-label {
+color: #b68a18;
+font-size: 0.8rem;
+font-weight: 800;
+letter-spacing: 4px;
+margin-bottom: 10px;
+}
+
+.section-heading h2 {
+font-size: 3.2rem;
+font-weight: 700;
+margin-bottom: 15px;
+}
+
+.heading-line {
+width: 70px;
+height: 4px;
+background: #f5c542;
+margin: auto;
+}
+
+.section-description {
+max-width: 650px;
+margin: 20px auto 0;
+color: #666;
+line-height: 1.8;
+}
+
+/* ABOUT */
+
+.about-section {
+background: #faf9f5;
+}
+
+.about-image {
+height: 520px;
+overflow: hidden;
+border-radius: 5px;
+box-shadow: 20px 20px 0 #f5c542;
+}
+
+.about-image img {
+height: 100%;
+object-fit: cover;
+transition: 0.7s;
+}
+
+.about-image:hover img {
+transform: scale(1.05);
+}
+
+.about-intro {
+font-family: "Playfair Display", serif;
+font-size: 2rem;
+font-weight: 700;
+color: #174b35;
+}
+
+.about-section p {
+line-height: 1.9;
+color: #666;
+}
+
+.about-stats {
+display: flex;
+gap: 40px;
+margin-top: 35px;
+}
+
+.about-stats h3 {
+font-size: 2rem;
+color: #174b35;
+margin-bottom: 3px;
+}
+
+.about-stats p {
+font-size: 0.8rem;
+margin: 0;
+}
+
+/* TOURIST PLACES */
+
+.places-section {
+background: white;
+}
+
+.place-card {
+height: 100%;
+background: white;
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+transition: 0.4s;
+}
+
+.place-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+height: 250px;
+position: relative;
+overflow: hidden;
+}
+
+.card-image img {
+height: 100%;
+object-fit: cover;
+transition: 0.6s;
+}
+
+.place-card:hover .card-image img {
+transform: scale(1.08);
+}
+
+.location-badge {
+position: absolute;
+bottom: 15px;
+left: 15px;
+background: white;
+padding: 7px 13px;
+border-radius: 30px;
+font-size: 0.75rem;
+font-weight: 700;
+}
+
+.location-badge i {
+color: #b68a18;
+}
+
+.card-body {
+padding: 25px;
+}
+
+.card-body h3 {
+font-size: 1.7rem;
+color: #174b35;
+}
+
+.card-body p {
+color: #777;
+line-height: 1.7;
+}
+
+.learn-more {
+color: #174b35;
+font-size: 0.85rem;
+font-weight: 700;
+}
+
+.learn-more i {
+margin-left: 5px;
+transition: 0.3s;
+}
+
+.learn-more:hover i {
+margin-left: 10px;
+}
+
+/* HERITAGE */
+
+.heritage-section {
+background: linear-gradient(
+rgba(14, 34, 27, 0.94),
+rgba(14, 34, 27, 0.94)
+),
+url("https://images.unsplash.com/photo-1600100397608-f010e2f8e7d8?auto=format&fit=crop&w=1800&q=80");
+
+```
+background-size: cover;
+background-attachment: fixed;
+```
+
+}
+
+.light-heading {
+color: white;
+}
+
+.light-heading .section-label {
+color: #f5c542;
+}
+
+.light-heading .section-description {
+color: rgba(255, 255, 255, 0.7);
+}
+
+.heritage-card {
+height: 400px;
+border-radius: 5px;
+overflow: hidden;
+position: relative;
+}
+
+.heritage-card img {
+height: 100%;
+object-fit: cover;
+transition: 0.6s;
+}
+
+.heritage-card:hover img {
+transform: scale(1.08);
+}
+
+.heritage-card::after {
+content: "";
+position: absolute;
+inset: 0;
+background: linear-gradient(
+transparent 35%,
+rgba(0, 0, 0, 0.9)
+);
+}
+
+.heritage-overlay {
+position: absolute;
+bottom: 25px;
+left: 25px;
+z-index: 2;
+color: white;
+}
+
+.heritage-overlay h3 {
+font-size: 1.8rem;
+}
+
+.heritage-overlay p {
+font-size: 0.85rem;
+opacity: 0.8;
+}
+
+/* NATURE */
+
+.nature-section {
+background: #f5f8f3;
+}
+
+.nature-card {
+background: white;
+border-radius: 8px;
+overflow: hidden;
+height: 100%;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.nature-card img {
+height: 260px;
+object-fit: cover;
+transition: 0.5s;
+}
+
+.nature-card:hover img {
+transform: scale(1.06);
+}
+
+.nature-info {
+padding: 25px;
+}
+
+.nature-info h3 {
+color: #174b35;
+}
+
+.nature-info p {
+color: #777;
+line-height: 1.7;
+}
+
+/* FOOD */
+
+.food-section {
+background: #fffaf0;
+}
+
+.food-card {
+background: white;
+padding: 40px 25px;
+text-align: center;
+height: 100%;
+border-radius: 8px;
+border: 1px solid #eee;
+transition: 0.4s;
+}
+
+.food-card:hover {
+transform: translateY(-8px);
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.food-icon {
+width: 75px;
+height: 75px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #174b35;
+color: #f5c542;
+border-radius: 50%;
+margin: 0 auto 20px;
+font-size: 1.8rem;
+}
+
+.food-card h3 {
+color: #174b35;
+}
+
+.food-card p {
+color: #777;
+line-height: 1.7;
+}
+
+/* GALLERY */
+
+.gallery-section {
+background: #111;
+}
+
+.gallery-section .section-heading {
+color: white;
+}
+
+.gallery-section .section-description {
+color: #aaa;
+}
+
+.gallery-grid {
+display: grid;
+grid-template-columns: 2fr 1fr 1fr;
+grid-template-rows: 300px 300px;
+gap: 15px;
+}
+
+.gallery-item {
+position: relative;
+overflow: hidden;
+border-radius: 5px;
+}
+
+.gallery-large {
+grid-row: span 2;
+}
+
+.gallery-item img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: 0.6s;
+}
+
+.gallery-item:hover img {
+transform: scale(1.08);
+}
+
+.gallery-caption {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+padding: 30px 20px 20px;
+color: white;
+background: linear-gradient(
+transparent,
+rgba(0, 0, 0, 0.8)
+);
+}
+
+.gallery-caption h3 {
+margin-bottom: 3px;
+}
+
+.gallery-caption p {
+margin: 0;
+font-size: 0.8rem;
+}
+
+/* TRAVEL */
+
+.travel-section {
+background: #174b35;
+}
+
+.travel-card {
+text-align: center;
+padding: 35px 20px;
+color: white;
+border: 1px solid rgba(255, 255, 255, 0.15);
+border-radius: 8px;
+height: 100%;
+transition: 0.4s;
+}
+
+.travel-card:hover {
+background: rgba(255, 255, 255, 0.08);
+transform: translateY(-8px);
+}
+
+.travel-card > i {
+font-size: 2.5rem;
+color: #f5c542;
+display: block;
+margin-bottom: 20px;
+}
+
+.travel-card h3 {
+font-size: 1.5rem;
+}
+
+.travel-card p {
+color: rgba(255, 255, 255, 0.7);
+line-height: 1.7;
+}
+
+/* FOOTER */
+
+footer {
+background: #0b2118;
+color: white;
+padding: 70px 0 20px;
+}
+
+footer h2 {
+font-size: 1.7rem;
+margin-bottom: 20px;
+}
+
+footer h2 i {
+color: #f5c542;
+}
+
+footer h4 {
+color: #f5c542;
+margin-bottom: 20px;
+font-family: "Montserrat", sans-serif;
+font-size: 1rem;
+}
+
+footer p {
+color: rgba(255, 255, 255, 0.6);
+line-height: 1.8;
+}
+
+footer a {
+display: block;
+color: rgba(255, 255, 255, 0.6);
+margin-bottom: 10px;
+transition: 0.3s;
+}
+
+footer a:hover {
+color: #f5c542;
+}
+
+.social-icons {
+display: flex;
+gap: 10px;
+margin-top: 20px;
+}
+
+.social-icons a {
+width: 40px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 50%;
+margin: 0;
+}
+
+.footer-bottom {
+text-align: center;
+padding-top: 20px;
+}
+
+.footer-bottom p {
+margin: 0;
+font-size: 0.8rem;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+
+```
+.navbar {
+    background: rgba(10, 25, 20, 0.96);
+}
+
+.nav-link {
+    margin-left: 0;
+    padding: 10px 0 !important;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+}
+
+.about-image {
+    height: 400px;
+    box-shadow: 12px 12px 0 #f5c542;
+}
+
+.gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px 300px;
+}
+
+.gallery-large {
+    grid-row: span 1;
+    grid-column: span 2;
+}
+```
+
+}
+
+@media (max-width: 576px) {
+
+```
+.section-padding {
+    padding: 70px 0;
+}
+
+.section-heading h2 {
+    font-size: 2.4rem;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+}
+
+.hero-small {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+}
+
+.hero-description {
+    font-size: 0.95rem;
+}
+
+.about-stats {
+    gap: 20px;
+}
+
+.about-stats h3 {
+    font-size: 1.5rem;
+}
+
+.gallery-grid {
+    display: block;
+}
+
+.gallery-item {
+    height: 300px;
+    margin-bottom: 15px;
+}
+```
+
+}
